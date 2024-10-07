@@ -47,7 +47,9 @@ void main() {
   print('');
 
   for (var data in dataSiswa) {
-    print('Nama: ${data['Nama']} =>  Hobby: ${data['Hobby']} ');
+    print('Nama: ${data['Nama']} ');
+    print('Hobby: ${data['Hobby']} ');
+    print('');
   }
 
   print('');
