@@ -85,6 +85,30 @@ Future<void> showBook() async {
   ;
 }
 
+// Fungsi untuk mencari buku berdasarkan sebagian judul (menggunakan contains)
 void searchBook() {
+  print('\nMasukkan kata kunci judul buku yang ingin dicari:');
+  String? searchTitle = stdin.readLineSync();
+
   bool found = false;
+
+  if (searchTitle != null && searchTitle.isNotEmpty) {
+    print('\nHasil pencarian untuk judul yang mengandung: "$searchTitle"');
+
+    // Looping semua buku di rak dan mencetak jika judul mengandung kata kunci
+    for (var book in bookshelf) {
+      if (book['title']!.toLowerCase().contains(searchTitle.toLowerCase())) {
+        print(
+            'Judul: ${book['title']}, Penulis: ${book['author']}, Halaman: ${book['page']}');
+        found = true;
+      }
+    }
+
+    // Jika tidak ada buku yang ditemukan
+    if (!found) {
+      print('Tidak ada buku yang cocok dengan pencarian.');
+    }
+  } else {
+    print('Error: Input tidak valid.');
+  }
 }
