@@ -130,3 +130,44 @@ class Rectangle extends Shape2d {
     print('');
   }
 }
+
+class Cube extends Shape3d {
+  double sideLenght;
+
+  Cube(this.sideLenght) : super('Kubus');
+
+  @override
+  double calculateVolume() {
+    print('This is Volume of Cube :');
+    return sideLenght * sideLenght * sideLenght;
+  }
+
+  @override
+  void displayinfo() {
+    print('\nNama: $Rectangle');
+    print('Panjang Sisi: $sideLenght ');
+    print(calculateVolume());
+    print('');
+  }
+}
+
+class Cylinder extends Shape3d {
+  double height, radius;
+  double phi = 3.14;
+
+  Cylinder(this.height, this.radius) : super('Kubus');
+
+  @override
+  double calculateVolume() {
+    print('This is Volume of Cube :');
+    return phi * (radius * radius) * height;
+  }
+
+  @override
+  void displayinfo() {
+    print('\nNama: $Rectangle');
+    print('Tinggi Sisi: $height dan Diameter: $radius ');
+    print(calculateVolume());
+    print('');
+  }
+}
