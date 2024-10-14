@@ -82,7 +82,6 @@ Future<void> showBook() async {
       print('Judul ${book['title']}, Author: ${book['author']}');
     }
   }
-  ;
 }
 
 // Fungsi untuk mencari buku berdasarkan sebagian judul (menggunakan contains)
