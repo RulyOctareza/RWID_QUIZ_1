@@ -54,14 +54,14 @@ class Square extends Shape2d {
 
   @override
   double calculateArea() {
-    print('This is result from Calculation of Area:');
+    print('Ini adalah Luas dari $name');
 
     return sisi! * sisi!;
   }
 
   @override
   double calculatePerimeter() {
-    print('This is result from Calculation of Perimeter:');
+    print('Tni adalah keliling dari $name');
     return sisi! * 4;
   }
 
@@ -83,13 +83,13 @@ class Circle extends Shape2d {
 
   @override
   double calculateArea() {
-    print('This is result from Calculation of area:');
+    print('Ini adalah Luas dari $name');
     return phi * radial! * radial!;
   }
 
   @override
   double calculatePerimeter() {
-    print('This is result from Calculation of Perimeter:');
+    print('Ini adalah keliling dari $name');
     return 2 * phi * radial!;
   }
 
@@ -111,13 +111,13 @@ class Rectangle extends Shape2d {
 
   @override
   double calculateArea() {
-    print('This is result from Calculation of area:');
+    print('ni adalah Luas dari $name');
     return panjang! * lebar!;
   }
 
   @override
   double calculatePerimeter() {
-    print('This is result from Calculation of Perimeter:');
+    print('Ini adalah keliling dari $name');
     return 2 * (panjang! * lebar!);
   }
 
@@ -138,13 +138,13 @@ class Cube extends Shape3d {
 
   @override
   double calculateVolume() {
-    print('This is Volume of Cube :');
+    print('This is Volume of $name');
     return sideLenght * sideLenght * sideLenght;
   }
 
   @override
   void displayinfo() {
-    print('\nNama: $Rectangle');
+    print('\nNama: $Cube');
     print('Panjang Sisi: $sideLenght ');
     print(calculateVolume());
     print('');
@@ -155,11 +155,11 @@ class Cylinder extends Shape3d {
   double height, radius;
   double phi = 3.14;
 
-  Cylinder(this.height, this.radius) : super('Kubus');
+  Cylinder(this.height, this.radius) : super('Tabung');
 
   @override
   double calculateVolume() {
-    print('This is Volume of Cube :');
+    print('This is Volume of $name');
     return phi * (radius * radius) * height;
   }
 
@@ -167,6 +167,27 @@ class Cylinder extends Shape3d {
   void displayinfo() {
     print('\nNama: $Rectangle');
     print('Tinggi Sisi: $height dan Diameter: $radius ');
+    print(calculateVolume());
+    print('');
+  }
+}
+
+class Ball extends Shape3d {
+  double phi = 3.14;
+  double radius;
+
+  Ball(this.radius) : super('Bola');
+
+  @override
+  double calculateVolume() {
+    print('This is a Volume of $name: ');
+    return (4 / 3) * phi * (radius * radius * radius);
+  }
+
+  @override
+  void displayinfo() {
+    print('\nNama: $Ball');
+    print('Diameter: $radius ');
     print(calculateVolume());
     print('');
   }
