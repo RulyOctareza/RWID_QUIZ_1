@@ -21,6 +21,10 @@ void main() {
   Circle circle = Circle(5);
   circle.displayinfo();
   print('');
+
+  Rectangle rectangle = Rectangle(5, 4);
+  rectangle.displayinfo();
+  print('');
 }
 
 abstract class Geomerty {
@@ -93,6 +97,34 @@ class Circle extends Shape2d {
   void displayinfo() {
     print('\nNama: $Circle');
     print('Panjang Sisi: $radial');
+    print(calculateArea());
+    print(calculatePerimeter());
+    print('');
+  }
+}
+
+class Rectangle extends Shape2d {
+  double? panjang;
+  double? lebar;
+
+  Rectangle(this.panjang, this.lebar) : super('Persegi Panjang');
+
+  @override
+  double calculateArea() {
+    print('This is result from Calculation of area:');
+    return panjang! * lebar!;
+  }
+
+  @override
+  double calculatePerimeter() {
+    print('This is result from Calculation of Perimeter:');
+    return 2 * (panjang! * lebar!);
+  }
+
+  @override
+  void displayinfo() {
+    print('\nNama: $Rectangle');
+    print('Panjang Sisi: $panjang dan Lebar : $lebar');
     print(calculateArea());
     print(calculatePerimeter());
     print('');
