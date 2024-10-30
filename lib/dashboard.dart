@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rwid/widgets/category.dart';
 
 class Dashboard extends StatelessWidget {
   final String name = 'Reza';
@@ -52,28 +53,55 @@ class Dashboard extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: const Row(
+                children: [
+                  const Category(
+                    color: Colors.blue,
+                    text: 'All',
+                    colortext: Colors.white,
+                  ),
+                  Category(
+                    color: Colors.white,
+                    text: 'Bussiness',
+                    colortext: Colors.blue,
+                  ),
+                  Category(
+                    color: Colors.white,
+                    text: 'Economy',
+                    colortext: Colors.blue,
+                  ),
+                  Category(
+                    color: Colors.white,
+                    text: 'Technology',
+                    colortext: Colors.blue,
+                  ),
+                ],
+              ),
+            ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  margin: const EdgeInsets.only(left: 16),
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                      color: Colors.blue[300],
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(24))),
-                  child: const IntrinsicWidth(
-                    child: Text(
-                      'All',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                  child: Text('Latest news'),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                  child: Text('See All'),
                 ),
               ],
-            )
+            ),
+            Container(
+              margin: const EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
+              width: MediaQuery.of(context).size.width,
+              height: 150,
+              decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(12)),
+            ),
           ],
         ),
       ),
