@@ -6,11 +6,11 @@ class Category extends StatelessWidget {
   final Color color;
   final Color colortext;
   const Category({
-    Key? key,
+    super.key,
     required this.text,
     required this.color,
     required this.colortext,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,14 +21,12 @@ class Category extends StatelessWidget {
           border: Border.all(color: Colors.blue),
           color: color,
           borderRadius: const BorderRadius.all(Radius.circular(24))),
-      child: IntrinsicWidth(
-        child: Text(
-          text,
-          style: TextStyle(
-            fontSize: 16,
-            color: colortext,
-            fontWeight: FontWeight.w500,
-          ),
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: 16,
+          color: colortext,
+          fontWeight: FontWeight.w500,
         ),
       ),
     );

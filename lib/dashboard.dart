@@ -1,120 +1,67 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rwid/home_page.dart';
+import 'package:flutter_rwid/saved_page.dart';
+import 'package:flutter_rwid/settings_page.dart';
 import 'package:flutter_rwid/widgets/category.dart';
 import 'package:flutter_rwid/widgets/news_container.dart';
 
-class Dashboard extends StatelessWidget {
-  final String name = 'Reza';
-
+class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
+
+  @override
+  State<Dashboard> createState() => _DashboardState();
+}
+
+class _DashboardState extends State<Dashboard> {
+  int _selectedIndex = 0;
+  final PageController _pageController = PageController();
+
+  void _onTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+    _pageController.animateToPage(_selectedIndex,
+        duration: const Duration(milliseconds: 200), curve: Curves.easeIn);
+  }
+
+  final List<Widget> _pages = <Widget>[
+    const HomePage(),
+    const SavedPage(),
+    const SettingsPage(),
+  ];
+  final String name = 'Reza';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            children: [
-              Container(
-                margin: const EdgeInsets.all(16),
-                padding: const EdgeInsets.all(16),
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                    color: Colors.blue[300],
-                    borderRadius: BorderRadius.circular(12)),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(
-                      height: 35,
-                    ),
-                    Text(
-                      'Welcome Back, $name !',
-                      style: const TextStyle(
-                        fontSize: 24,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    const Text(
-                      'Discover a world of News that matter to you',
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: const Row(
-                  children: [
-                    const Category(
-                      color: Colors.blue,
-                      text: 'All',
-                      colortext: Colors.white,
-                    ),
-                    Category(
-                      color: Colors.white,
-                      text: 'Bussiness',
-                      colortext: Colors.blue,
-                    ),
-                    Category(
-                      color: Colors.white,
-                      text: 'Economy',
-                      colortext: Colors.blue,
-                    ),
-                    Category(
-                      color: Colors.white,
-                      text: 'Technology',
-                      colortext: Colors.blue,
-                    ),
-                  ],
-                ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                    child: Text('Latest news'),
-                  ),
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                    child: Text('See All'),
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  NewsContainer(
-                      categorynews: 'Technology',
-                      date: '27 Oct 2024',
-                      news: 'AI Revolutionizes Data Processing in 2024'),
-                  NewsContainer(
-                      categorynews: 'Technology',
-                      date: '27 Oct 2024',
-                      news: 'AI Revolutionizes Data Processing in 2024'),
-                  NewsContainer(
-                      categorynews: 'Technology',
-                      date: '27 Oct 2024',
-                      news: 'AI Revolutionizes Data Processing in 2024'),
-                ],
-              )
-            ],
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
           ),
-        ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.bookmark),
+            label: 'Saved',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Settings',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.blue,
+        onTap: _onTapped,
+      ),
+      body: PageView(
+        controller: _pageController,
+        // scrollDirection: Axis.vertical,
+        onPageChanged: (value) {
+          setState(() {
+            _selectedIndex = value;
+          });
+        },
+        children: _pages,
       ),
     );
   }

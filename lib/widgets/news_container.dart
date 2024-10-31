@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rwid/widgets/category.dart';
 
 class NewsContainer extends StatelessWidget {
   final String categorynews;
@@ -15,7 +14,7 @@ class NewsContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(16),
+      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
       padding: const EdgeInsets.all(16),
       width: MediaQuery.of(context).size.width,
       height: 150,
