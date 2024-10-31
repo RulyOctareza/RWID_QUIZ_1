@@ -1,12 +1,21 @@
 # flutter_rwid
 
-A new Flutter project.
+Tugas Flutter Fundamental RWID
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Aplikasi ini dibuat untuk memenuhi tugas Flutter Fundamental sekaligus personal branading RWID.
 
-A few resources to get you started if this is your first Flutter project:
+Halaman Homepage
+
+![alt text](image.png)
+
+Halaman Savedpage
+
+![alt text](image-1.png)
+
+Halaman Settings
+![alt text](image-2.png)
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
