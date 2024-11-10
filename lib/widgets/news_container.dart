@@ -34,7 +34,7 @@ class NewsContainer extends StatelessWidget {
                     borderRadius: const BorderRadius.all(Radius.circular(22))),
                 child: Text(
                   categorynews,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                     color: Colors.blue,
                     fontWeight: FontWeight.w500,
@@ -44,8 +44,8 @@ class NewsContainer extends StatelessWidget {
               Container(
                 width: 200,
                 child: Text(news,
-                    style:
-                        TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+                    style: const TextStyle(
+                        fontSize: 16, fontWeight: FontWeight.w500)),
               ),
               Container(
                 child: Text(date),
@@ -54,7 +54,7 @@ class NewsContainer extends StatelessWidget {
           ),
           Container(
             width: 100,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(image: AssetImage('assets/person.png'))),
           ),
         ],

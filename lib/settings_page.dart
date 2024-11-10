@@ -166,7 +166,35 @@ class SettingsPage extends StatelessWidget {
             ElevatedButton(
                 style: const ButtonStyle(
                     padding: WidgetStatePropertyAll(EdgeInsets.zero)),
-                onPressed: () {},
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: Icon(
+                          Icons.info,
+                          color: Colors.red,
+                          size: 48,
+                        ),
+                        content: Text("Are you sure you want to logout?"),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop(); // Close the dialog
+                            },
+                            child: Text("No"),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              // Logic for logging out goes here
+                            },
+                            child: Text("Yes"),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
                 child: Container(
                     height: 50,
                     width: 250,

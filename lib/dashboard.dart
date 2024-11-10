@@ -7,7 +7,6 @@ import 'package:flutter_rwid/widgets/news_container.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
-
   @override
   State<Dashboard> createState() => _DashboardState();
 }
@@ -15,7 +14,6 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   int _selectedIndex = 0;
   final PageController _pageController = PageController();
-
   void _onTapped(int index) {
     setState(() {
       _selectedIndex = index;
