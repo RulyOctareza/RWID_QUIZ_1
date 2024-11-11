@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rwid/home_page.dart';
 import 'package:flutter_rwid/saved_page.dart';
 import 'package:flutter_rwid/settings_page.dart';
-import 'package:flutter_rwid/widgets/category.dart';
-import 'package:flutter_rwid/widgets/news_container.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -31,35 +29,37 @@ class _DashboardState extends State<Dashboard> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark),
-            label: 'Saved',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Settings',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
-        onTap: _onTapped,
-      ),
-      body: PageView(
-        controller: _pageController,
-        // scrollDirection: Axis.vertical,
-        onPageChanged: (value) {
-          setState(() {
-            _selectedIndex = value;
-          });
-        },
-        children: _pages,
+    return SafeArea(
+      child: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.bookmark),
+              label: 'Saved',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Settings',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.blue,
+          onTap: _onTapped,
+        ),
+        body: PageView(
+          controller: _pageController,
+          // scrollDirection: Axis.vertical,
+          onPageChanged: (value) {
+            setState(() {
+              _selectedIndex = value;
+            });
+          },
+          children: _pages,
+        ),
       ),
     );
   }
