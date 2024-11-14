@@ -41,7 +41,7 @@ class NewsContainer extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
+              SizedBox(
                 width: 200,
                 child: Text(news,
                     style: const TextStyle(

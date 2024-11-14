@@ -17,7 +17,7 @@ class _DashboardState extends State<Dashboard> {
       _selectedIndex = index;
     });
     _pageController.animateToPage(_selectedIndex,
-        duration: const Duration(milliseconds: 200), curve: Curves.easeIn);
+        duration: const Duration(milliseconds: 500), curve: Curves.linear);
   }
 
   final List<Widget> _pages = <Widget>[

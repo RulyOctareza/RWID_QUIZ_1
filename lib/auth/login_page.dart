@@ -83,20 +83,20 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 ElevatedButton(
                     onPressed: () {},
-                    child: Text(
-                      'Sign In',
-                      style: TextStyle(color: Colors.white, fontSize: 16),
-                    ),
                     style: ElevatedButton.styleFrom(
                       fixedSize: Size(MediaQuery.of(context).size.width, 20),
                       backgroundColor: Colors.blue,
+                    ),
+                    child: Text(
+                      'Sign In',
+                      style: TextStyle(color: Colors.white, fontSize: 16),
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -106,11 +106,11 @@ class _LoginPageState extends State<LoginPage> {
                       width: MediaQuery.of(context).size.width * 0.4,
                       color: Colors.black,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 7,
                     ),
-                    Text('Or'),
-                    SizedBox(
+                    const Text('Or'),
+                    const SizedBox(
                       width: 7,
                     ),
                     Container(
@@ -120,11 +120,15 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 ElevatedButton(
                     onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: Size(MediaQuery.of(context).size.width, 20),
+                      backgroundColor: Colors.white,
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -134,21 +138,17 @@ class _LoginPageState extends State<LoginPage> {
                           style: TextStyle(color: Colors.blue, fontSize: 16),
                         ),
                       ],
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      fixedSize: Size(MediaQuery.of(context).size.width, 20),
-                      backgroundColor: Colors.white,
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Don\'t have an account?'),
+                    const Text('Don\'t have an account?'),
                     TextButton(
                         onPressed: () {},
-                        child: Text(
+                        child: const Text(
                           'Sign Up',
                           style: TextStyle(color: Colors.blue),
                         ))

@@ -37,7 +37,7 @@ class _SignupPageState extends State<SignupPage> {
                 const SizedBox(
                   height: 12,
                 ),
-                TextField(
+                const TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(
@@ -86,20 +86,20 @@ class _SignupPageState extends State<SignupPage> {
                 const SizedBox(
                   height: 6,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 ElevatedButton(
                     onPressed: () {},
-                    child: Text(
-                      'Sign Up',
-                      style: TextStyle(color: Colors.white, fontSize: 16),
-                    ),
                     style: ElevatedButton.styleFrom(
                       fixedSize: Size(MediaQuery.of(context).size.width, 20),
                       backgroundColor: Colors.blue,
+                    ),
+                    child: Text(
+                      'Sign Up',
+                      style: TextStyle(color: Colors.white, fontSize: 16),
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -109,11 +109,11 @@ class _SignupPageState extends State<SignupPage> {
                       width: MediaQuery.of(context).size.width * 0.4,
                       color: Colors.black,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 7,
                     ),
-                    Text('Or'),
-                    SizedBox(
+                    const Text('Or'),
+                    const SizedBox(
                       width: 7,
                     ),
                     Container(
@@ -123,11 +123,15 @@ class _SignupPageState extends State<SignupPage> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 ElevatedButton(
                     onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: Size(MediaQuery.of(context).size.width, 20),
+                      backgroundColor: Colors.white,
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -137,21 +141,17 @@ class _SignupPageState extends State<SignupPage> {
                           style: TextStyle(color: Colors.blue, fontSize: 16),
                         ),
                       ],
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      fixedSize: Size(MediaQuery.of(context).size.width, 20),
-                      backgroundColor: Colors.white,
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Already Have Account?'),
+                    const Text('Already Have Account?'),
                     TextButton(
                         onPressed: () {},
-                        child: Text(
+                        child: const Text(
                           'Sign In',
                           style: TextStyle(color: Colors.blue),
                         ))
