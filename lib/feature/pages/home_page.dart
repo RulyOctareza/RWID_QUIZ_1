@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rwid/feature/pages/settings_page.dart';
 import 'package:flutter_rwid/feature/widgets/category.dart';
 import 'package:flutter_rwid/feature/widgets/news_container.dart';
+import 'package:lottie/lottie.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -23,15 +24,25 @@ class HomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(
-                    height: 35,
+                    height: 10,
                   ),
-                  Text(
-                    'Welcome Back, $name !',
-                    style: const TextStyle(
-                      fontSize: 24,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
-                    ),
+                  Row(
+                    children: [
+                      Text(
+                        'Welcome Back, \n$name !',
+                        style: const TextStyle(
+                          fontSize: 24,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Spacer(),
+                      Lottie.asset(
+                          'assets/lottie/Animation - 1733772213165.json',
+                          width: 120,
+                          height: 120,
+                          fit: BoxFit.fill),
+                    ],
                   ),
                   const SizedBox(
                     height: 8,

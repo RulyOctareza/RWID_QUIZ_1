@@ -6,7 +6,6 @@ import 'package:flutter_rwid/feature/pages/dashboard.dart';
 import 'package:flutter_rwid/feature/pages/saved_page.dart';
 import 'package:flutter_rwid/feature/pages/settings_page.dart';
 import 'package:flutter_rwid/feature/todo_list/todo_list_page.dart';
-import 'package:path/path.dart';
 
 Map<String, Widget Function(BuildContext)> appRoutes = {
   '/': (context) => const LoginPage(),
