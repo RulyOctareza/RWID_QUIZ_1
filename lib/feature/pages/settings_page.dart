@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rwid/feature/auth/login_page.dart';
 
 String email = 'rulyoctareza@gmail.com';
 String name = 'Ruly Octareza';
@@ -176,17 +177,18 @@ class SettingsPage extends StatelessWidget {
                           color: Colors.red,
                           size: 48,
                         ),
-                        content: Text("Are you sure you want to logout?"),
+                        content: Text("Are you sure you want to log out?"),
                         actions: [
                           TextButton(
                             onPressed: () {
-                              Navigator.of(context).pop(); // Close the dialog
+                              Navigator.of(context).pop();
                             },
                             child: Text("No"),
                           ),
                           TextButton(
                             onPressed: () {
-                              // Logic for logging out goes here
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => LoginPage()));
                             },
                             child: Text("Yes"),
                           ),

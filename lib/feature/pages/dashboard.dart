@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rwid/home_page.dart';
-import 'package:flutter_rwid/saved_page.dart';
-import 'package:flutter_rwid/settings_page.dart';
-import 'package:flutter_rwid/widgets/category.dart';
-import 'package:flutter_rwid/widgets/news_container.dart';
+import 'package:flutter_rwid/feature/pages/home_page.dart';
+import 'package:flutter_rwid/feature/pages/saved_page.dart';
+import 'package:flutter_rwid/feature/pages/settings_page.dart';
+import 'package:flutter_rwid/feature/widgets/category.dart';
+import 'package:flutter_rwid/feature/widgets/news_container.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});

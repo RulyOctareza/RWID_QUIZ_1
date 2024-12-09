@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rwid/login_page.dart';
-import 'package:flutter_rwid/settings_page.dart';
-import 'package:flutter_rwid/signup_page.dart';
+import 'package:flutter_rwid/feature/auth/login_page.dart';
+import 'package:flutter_rwid/feature/pages/settings_page.dart';
+import 'package:flutter_rwid/feature/auth/signup_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SettingsPage(),
+      home: LoginPage(),
+      
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rwid/settings_page.dart';
-import 'package:flutter_rwid/widgets/category.dart';
-import 'package:flutter_rwid/widgets/news_container.dart';
+import 'package:flutter_rwid/feature/pages/settings_page.dart';
+import 'package:flutter_rwid/feature/widgets/category.dart';
+import 'package:flutter_rwid/feature/widgets/news_container.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
