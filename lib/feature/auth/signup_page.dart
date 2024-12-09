@@ -1,11 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_rwid/feature/auth/login_page.dart';
-import 'package:flutter_rwid/feature/auth/signup_page.dart';
 import 'package:flutter_rwid/feature/widgets/auth/signup_form.dart';
-
-import 'package:flutter_rwid/utils/text_utils.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({super.key});
@@ -29,7 +23,7 @@ class _SignupPageState extends State<SignupPage> {
           ),
         ),
         alignment: Alignment.center,
-        child: SignupForm(),
+        child: const SignupForm(),
       ),
     );
   }

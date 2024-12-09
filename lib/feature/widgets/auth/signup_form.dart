@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-import '../../../utils/text_utils.dart';
+import '../../../core/utils/text_utils.dart';
 import '../../auth/login_page.dart';
 
 class SignupForm extends StatefulWidget {
@@ -18,6 +18,7 @@ class _SignupFormState extends State<SignupForm> {
   final TextEditingController _confirmPasswordController =
       TextEditingController();
 
+  @override
   void dispose() {
     _passwordController.dispose();
     _confirmPasswordController.dispose();
@@ -158,7 +159,7 @@ class _SignupFormState extends State<SignupForm> {
                                 content: Text('Sign up successful!')),
                           );
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => LoginPage()));
+                              builder: (context) => const LoginPage()));
                         }
                       }
                     },
@@ -181,7 +182,7 @@ class _SignupFormState extends State<SignupForm> {
                     child: InkWell(
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => LoginPage()));
+                            builder: (context) => const LoginPage()));
                       },
                       child: const TextUtil(
                         text: "Have an Account? Login here!",

@@ -6,7 +6,13 @@ class SavedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text('saved page'),
-    );
+        child: ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(
+                context,
+                '/newspage',
+              );
+            },
+            child: Text('Go to News Page')));
   }
 }

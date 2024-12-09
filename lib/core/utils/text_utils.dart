@@ -7,12 +7,12 @@ class TextUtil extends StatelessWidget {
   final Color color;
 
   const TextUtil({
-    Key? key,
+    super.key,
     required this.text,
     this.weight = false,
     this.size = 14,
     this.color = Colors.white,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

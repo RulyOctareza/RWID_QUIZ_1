@@ -172,25 +172,26 @@ class SettingsPage extends StatelessWidget {
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: Icon(
+                        title: const Icon(
                           Icons.info,
                           color: Colors.red,
                           size: 48,
                         ),
-                        content: Text("Are you sure you want to log out?"),
+                        content:
+                            const Text("Are you sure you want to log out?"),
                         actions: [
                           TextButton(
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
-                            child: Text("No"),
+                            child: const Text("No"),
                           ),
                           TextButton(
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => LoginPage()));
+                                  builder: (context) => const LoginPage()));
                             },
-                            child: Text("Yes"),
+                            child: const Text("Yes"),
                           ),
                         ],
                       );

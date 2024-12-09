@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rwid/feature/pages/home_page.dart';
 import 'package:flutter_rwid/feature/pages/saved_page.dart';
 import 'package:flutter_rwid/feature/pages/settings_page.dart';
-import 'package:flutter_rwid/feature/widgets/category.dart';
-import 'package:flutter_rwid/feature/widgets/news_container.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});

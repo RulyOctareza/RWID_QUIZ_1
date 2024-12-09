@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_rwid/utils/text_utils.dart';
+import 'package:flutter_rwid/core/utils/text_utils.dart';
 
 import '../../auth/signup_page.dart';
 import '../../pages/dashboard.dart';

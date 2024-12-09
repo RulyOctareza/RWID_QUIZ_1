@@ -1,11 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_rwid/feature/pages/dashboard.dart';
-import 'package:flutter_rwid/feature/auth/signup_page.dart';
 import 'package:flutter_rwid/feature/widgets/auth/login_form.dart';
-
-import 'package:flutter_rwid/utils/text_utils.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -15,9 +9,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  bool _rememberMe = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
         alignment: Alignment.center,
-        child: LoginForm(),
+        child: const LoginForm(),
       ),
     );
   }
