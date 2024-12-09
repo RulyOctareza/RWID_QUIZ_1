@@ -3,7 +3,7 @@ import 'package:flutter_rwid/main.dart';
 
 import 'package:objectbox/objectbox.dart';
 
-import '../../core/objectbox/news_model.dart';
+import '../../core/database/objectbox/news_model.dart';
 import 'news_card.dart';
 import 'news_form.dart';
 

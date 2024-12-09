@@ -9,7 +9,7 @@ import 'package:objectbox/objectbox.dart';
 import '../widgets/custom_outlined_button.dart';
 import '../widgets/custom_text_field.dart';
 import '../widgets/primary_button.dart';
-import '/core/objectbox/news_model.dart';
+import '../../core/database/objectbox/news_model.dart';
 
 class NewsForm extends StatefulWidget {
   final Newsmodel? news;

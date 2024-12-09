@@ -14,8 +14,8 @@ import 'package:objectbox/internal.dart'
 import 'package:objectbox/objectbox.dart' as obx;
 import 'package:objectbox_flutter_libs/objectbox_flutter_libs.dart';
 
-import 'core/objectbox/news_model.dart';
-import 'core/objectbox/user_model.dart';
+import 'core/database/objectbox/news_model.dart';
+import 'core/database/objectbox/user_model.dart';
 
 export 'package:objectbox/objectbox.dart'; // so that callers only have to import this file
 

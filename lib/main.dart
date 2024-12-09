@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rwid/core/objectbox/objectbox.dart';
+import 'package:flutter_rwid/core/database/objectbox/objectbox.dart';
 import 'package:flutter_rwid/core/routes/route.dart';
 import 'package:flutter_rwid/feature/auth/login_page.dart';
 

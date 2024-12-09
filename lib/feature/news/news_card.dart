@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
-import '../../core/objectbox/news_model.dart';
+import '../../core/database/objectbox/news_model.dart';
 
 class NewsCard extends StatelessWidget {
   final void Function()? onLongPress;
@@ -63,7 +63,8 @@ class NewsCard extends StatelessWidget {
                       File(news.imageUrl!),
                     )
                   : Image.asset(
-                      "assets/person.png",
+                      "assets/google-logo.png",
+                      scale: 10,
                     ),
             )
           ],
