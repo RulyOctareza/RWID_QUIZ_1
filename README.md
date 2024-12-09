@@ -17,6 +17,12 @@ Halaman Savedpage
 Halaman Settings
 ![alt text](image-2.png)
 
+Halaman Create new News with ObjectBox Database
+![alt text](image-3.png)
+
+Halaman Todo List with Sqflite Database
+![alt text](image-4.png)
+
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
