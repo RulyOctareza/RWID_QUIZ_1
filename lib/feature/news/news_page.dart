@@ -68,11 +68,7 @@ class _NewsPageState extends State<NewsPage> {
             centerTitle: true,
             actions: [
               IconButton(
-                onPressed: () {
-                  // Navigator.of(context).push(MaterialPageRoute(
-                  //   builder: (context) {},
-                  // ));
-                },
+                onPressed: () {},
                 icon: Icon(Icons.dashboard),
               )
             ],
@@ -89,7 +85,7 @@ class _NewsPageState extends State<NewsPage> {
                 },
               );
             },
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.green,
             child: const Icon(
               Icons.add,
               color: Colors.white,
